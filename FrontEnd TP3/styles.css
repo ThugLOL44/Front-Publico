@@ -99,7 +99,6 @@ nav {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    
 }
 
 
@@ -203,11 +202,11 @@ footer p {
 /* Carrousel */
 
 .slider {
-    position: absolute;
+    position: realtive;
     text-align: center;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
 }
   
 .slides {
@@ -218,13 +217,14 @@ footer p {
 
   
 .slides input {
-    display: none;
+    display: none; 
 }
   
 .slide{
     width: 20%;
     transition: 2s;
-    position: relative
+    position: relative;
+    
   }
   
 .slide:before {
@@ -235,6 +235,7 @@ footer p {
 	left: 0;
 	right: 0;
 	background-color: rgba(0,0,0,0.6);
+
 }
 .slide img {
     width: 100%;
@@ -243,10 +244,6 @@ footer p {
 
 } 
 
-
-
-
-  
   /*css for manual slide navigation*/
   
   .navigation-manual {
@@ -259,11 +256,14 @@ footer p {
 }
   
    .manual-btn{
-    border: 2px solid #40D3DC;
+    border: 2px solid #ff5500;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
-    transition: 1s;
+    transition: 2s;
+    z-index: 999;
+    margin-bottom: 55px;
+    
   }
   
   .manual-btn:not(:last-child){
@@ -298,6 +298,7 @@ footer p {
     width: 800px;
     justify-content: center;
     margin-top: 460px;
+    
   }
   
    /* .navigation-auto div{
@@ -330,13 +331,13 @@ footer p {
   /* box ¿Quienes Somos?*/
   .identidad {
     background: #fff;
-    margin: -100px auto 50px;
+    margin: -130px auto 50px;
     max-width: 800px;
-    padding-top: 20px;
+    padding-top: 80px;
     position: relative;
     z-index: 1;
     text-align: center;
-    height: 300px;
+    height: 400px;
   }
  
   .our-description article h2{
@@ -354,8 +355,6 @@ footer p {
     padding-bottom: 5px;
     opacity: 0.85;
     object-fit: cover;
-    width:
-
   }
 
 .columna {
