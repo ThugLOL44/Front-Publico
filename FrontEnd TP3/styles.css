@@ -1,0 +1,304 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/* Estilos del encabezado */
+header {
+    background-color: black;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 80px;
+    height: auto;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    
+}
+
+.nav-links a:hover {
+    color: #333;
+}
+
+/* Estilos del héroe */
+.hero {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+/* Resto de estilos para los contenidos del hero */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+
+    
+}
+
+.hero-text h2 {
+    font-size: 100px;
+    margin-bottom: 20px;
+    font-family: "Montserrat", "sans-serif";
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff5500;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e64400;
+}
+/* Estilos del menú */
+.menu {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.menu-item img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.menu-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    margin-bottom: 10px;
+}
+
+.menu-item .price {
+    font-weight: bold;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Carrousel */
+
+.slider {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+  
+.slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+  
+.slides input {
+    display: none;
+}
+  
+.slide{
+    width: 20%;
+    transition: 2s;
+    position: relative
+  }
+  
+.slide:before {
+	content:'';
+	position: absolute;
+        top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.6);
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+} 
+
+
+
+
+  
+  /*css for manual slide navigation*/
+  
+  .navigation-manual {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+}
+  
+   .manual-btn{
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover{
+    background: #40D3DC;
+  } 
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  /*css for automatic navigation*/
+  
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+  }
+  
+  /* .navigation-auto div{
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  } */
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #40D3DC;
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #40D3DC;
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #40D3DC;
+  }
+  
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #40D3DC;
+  }
+        
+

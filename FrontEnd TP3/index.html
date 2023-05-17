@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante delicioso</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+    <script src="slider.js"></script>
+</head>
+
+<body>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://media-public.canva.com/VLUzc/MAEx1RVLUzc/1/tl.png" alt="Logo del Restaurante QueRico!">
+                <h1>Restaurante QueRico!</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Menú</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+            <!--image slider start-->
+            <div class="slider">
+                <div class="slides">
+                <!--radio buttons start-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <!--radio buttons end-->
+                <!--slide images start-->
+                <div class="slide first">
+                    <img src="https://media.admagazine.com/photos/61fabaeb9b19d943aa117c63/16:9/pass/CH_Quality_BISTRO_NYC_202.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="https://www.pixelstalk.net/wp-content/uploads/images5/4K-Food-HD-Wallpaper-Free-download.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="https://epicurmagazine.files.wordpress.com/2017/06/epicur-magazine-buen-vivir-cortes-carne-premium-falda-costa-rica-e1498327231825.jpg?w=1441&h=768&crop=1" alt="">
+                </div>
+                <div class="slide">
+                    <img src="https://media.gq.com.mx/photos/612146ce9bbe8e82f71baa66/master/pass/cerveza.jpg" alt="">
+                </div>
+                <!--slide images end-->
+                <!--automatic navigation start-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+                <!--automatic navigation end-->
+                </div>
+                <!--manual navigation start-->
+                <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                </div>
+                <!--manual navigation end-->
+            </div>
+
+        <div class="hero-text">
+            <h2>WELCOME</h2>
+            <p>Disfruta de los mejores platos y sabores exquisitos</p>
+            <a href="#menu" class="btn">Hace tu pedido ahora</a>
+        </div>
+        
+  
+    </section>
+
+    <section id="menu" class="menu">
+        <h2>Nuestro Menú</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="food1.jpg" alt="Plato 1">
+                <h3>Plato 1</h3>
+                <p>Descripción del plato 1.</p>
+                <span class="price">$10</span>
+            </div>
+            <div class="menu-item">
+                <img src="food2.jpg" alt="Plato 2">
+                <h3>Plato 2</h3>
+                <p>Descripción del plato 2.</p>
+                <span class="price">$15</span>
+            </div>
+            <div class="menu-item">
+                <img src="food3.jpg" alt="Plato 3">
+                <h3>Plato 3</h3>
+                <p>Descripción del plato 3.</p>
+                <span class="price">$12</span>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>Todos los derechos reservados &copy; 2023 Restaurante delicioso</p>
+    </footer>
+</body>
+
+</html>
