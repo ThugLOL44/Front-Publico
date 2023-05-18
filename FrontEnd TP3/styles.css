@@ -1,15 +1,11 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", "sans-serif";
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 
 ::-webkit-scrollbar {
     display: none;
@@ -21,36 +17,51 @@ body {
 header {
     background-color: white;
     padding: 0px;
+    
 
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9); /* Color de fondo inicial con transparencia */
+  backdrop-filter: blur(10px); /* Aplica un efecto de desenfoque */
+  z-index: 9999;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Agrega una transición suave */
+}
+
+
   
-  .logo {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    justify-content: center;
-    position: relative;
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: -30px;
+  
 
   }
 .logo img{
-    width: 80px;
-    height: auto;
-    margin-left: 120px;
+  width: 80px;
+  height: auto;
+  display: inline-block;
+  align-items: center;
 }
 
 .logo h1 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-    color: sandybrown;
-    text-align: center;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: sandybrown;
+  text-align: center;
+  align-items: center;
+  display: inline-block;
 }
+
 
 .nav-links li {
     display:inline-block;
@@ -62,35 +73,54 @@ nav {
 }
 
 .nav-links a {
+
     text-decoration: none;
     color: rgb(0, 0, 0);
-    transition: color 0.3s ease;
-    
-    
+    font-family: "Montserrat", "sans-serif";
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.4px;
+    color: #333;
+    display: block;
+    line-height: 80px;
+    padding: 0;
+    padding-right: 40px;
+    position: relative;
+    transition: color .15s ease-in-out
 }
 
 .nav-links a:hover {
-    color:#333;
+    color:#ec7e00;
 }
 
-/* notification */
-.notification{
-    background-color: sandybrown;
-    height: 60px;
-    margin: 0;
-    display: flex;
-    align-items: center;
+#link1 {
+  position: absolute;
+  right: 25%;
+}
+#link2 {
+  position: absolute;
+  left: 25%;
 }
 
-.notification p{
+
+.notification {
+  background-color: sandybrown;
+  height: 60px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.notification p {
   margin: 0;
   text-align: center;
   width: 100%;
-  /* color: black; */
-  color: white
-  
-}
+  color: white;
 
+}
 
 /* Estilos del héroe */
 .hero {
@@ -113,9 +143,7 @@ nav {
     justify-content: center;
     align-items: center;
     color: #fff;
-    text-align: center;
-
-    
+    text-align: center;   
 }
 
 .hero-text h2 {
@@ -146,7 +174,7 @@ nav {
 .btn:hover {
     background-color: #e64400;
 }
-/* Estilos del menú */
+/* Estilos del menú
 .menu {
     background-color: #f8f8f8;
     padding: 40px 0;
@@ -184,7 +212,7 @@ nav {
 
 .menu-item .price {
     font-weight: bold;
-}
+} */
 
 /* Estilos del pie de página */
 footer {
@@ -192,6 +220,8 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    
+
 }
 
 footer p {
@@ -330,24 +360,35 @@ footer p {
 
   /* box ¿Quienes Somos?*/
   .identidad {
-    background: #fff;
+    background: white;
     margin: -130px auto 50px;
     max-width: 800px;
     padding-top: 80px;
     position: relative;
     z-index: 1;
     text-align: center;
-    height: 400px;
+    height: 300px;
+    border: 4px solid sandybrown;
+    border-radius: 20px;
   }
+
+
  
-  .our-description article h2{
-    margin-top: 2px;
+
+  
+  .our-description{
+    max-width: 800px;
+    height: 120px;
+    margin:0;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
   }
   
   /* gallery */
 
 .gallery{
-    margin: 300px;
+    margin: 150px;
     margin-top: 0px;
 }
   .gallery img{
@@ -355,11 +396,12 @@ footer p {
     padding-bottom: 5px;
     opacity: 0.85;
     object-fit: cover;
+    margin-top: 2px;
   }
 
 .columna {
     float: left;
-    width: 32%;
+    width: 33%;
     padding-right: 5px;
 }
 
