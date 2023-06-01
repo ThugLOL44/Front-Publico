@@ -4,6 +4,8 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    background-image: linear-gradient(to bottom left, black, rgb(68, 67, 67));
+    
 }
 
 
@@ -14,12 +16,6 @@ body {
 
 
 /* Estilos del encabezado */
-header {
-    background-color: white;
-    padding: 0px;
-    
-
-}
 
 nav {
   position: fixed;
@@ -28,10 +24,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.9); /* Color de fondo inicial con transparencia */
-  backdrop-filter: blur(10px); /* Aplica un efecto de desenfoque */
   z-index: 9999;
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Agrega una transición suave */
 }
 
 
@@ -60,6 +53,7 @@ nav {
   text-align: center;
   align-items: center;
   display: inline-block;
+  text-shadow: 0px 0px 6px white ;
 }
 
 
@@ -75,20 +69,22 @@ nav {
 .nav-links a {
 
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: "Montserrat", "sans-serif";
     font-weight: 700;
     text-transform: uppercase;
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.4px;
-    color: #333;
+    color: #f5f5f5;
     display: block;
     line-height: 80px;
     padding: 0;
     padding-right: 40px;
     position: relative;
-    transition: color .15s ease-in-out
+    transition: color .15s ease-in-out;
+    text-shadow: 0px 0px 6px sandybrown ;
+
 }
 
 .nav-links a:hover {
@@ -106,7 +102,7 @@ nav {
 
 
 .notification {
-  background-color: sandybrown;
+  background-image: radial-gradient(white,sandybrown);
   height: 60px;
   margin: 0;
   display: flex;
@@ -118,7 +114,7 @@ nav {
   margin: 0;
   text-align: center;
   width: 100%;
-  color: white;
+  color: black;
 
 }
 
@@ -129,6 +125,9 @@ nav {
     overflow: hidden;
     margin: 0;
     padding: 0;
+    border-bottom: 5px solid black;
+    box-shadow: 0px 5px 50px white;
+    
 }
 
 
@@ -220,6 +219,8 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    border-top: 3px;
+    box-shadow: 0px -10px 50px white;
     
 
 }
@@ -232,11 +233,12 @@ footer p {
 /* Carrousel */
 
 .slider {
-    position: realtive;
     text-align: center;
     width: 100%;
     height: 100%;
     z-index: 1;
+    
+    
 }
   
 .slides {
@@ -260,11 +262,11 @@ footer p {
 .slide:before {
 	content:'';
 	position: absolute;
-    top: 0;
+  top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.5);
 
 }
 .slide img {
@@ -360,7 +362,7 @@ footer p {
 
   /* box ¿Quienes Somos?*/
   .identidad {
-    background: white;
+    background-image: radial-gradient(white,sandybrown);
     margin: -130px auto 50px;
     max-width: 800px;
     padding-top: 80px;
@@ -368,9 +370,15 @@ footer p {
     z-index: 1;
     text-align: center;
     height: 300px;
-    border: 4px solid sandybrown;
+    border: 4px solid black;
     border-radius: 20px;
-  }
+    box-shadow: 0px 0px 30px white;
+    transition: all .9s ease;
+    }
+
+    .identidad:hover{
+      transform: scale(1.02);
+    }
 
 
  

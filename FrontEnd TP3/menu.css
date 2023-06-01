@@ -7,6 +7,9 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-image: linear-gradient(to bottom left, black, rgb(68, 67, 67));
+  order: 0;
+
 }
 
 .chefs{
@@ -18,14 +21,14 @@ body {
   visibility: visible;
   position: fixed;
   z-index: 0;
-  height: 50%;
+  height: 60%;
   bottom: 0px;
   right: 0px;
   transition: all .9s ease;
 }
 
 .chefs img:hover{
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 ::-webkit-scrollbar {
@@ -46,10 +49,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.9); /* Color de fondo inicial con transparencia */
   backdrop-filter: blur(10px); /* Aplica un efecto de desenfoque */
   z-index: 9999;
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Agrega una transición suave */
+ 
 }
 
 
@@ -78,6 +80,7 @@ nav {
   text-align: center;
   align-items: center;
   display: inline-block;
+  text-shadow: 0px 0px 6px white ;
 }
 
 
@@ -92,21 +95,23 @@ nav {
 
 .nav-links a {
 
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-family: "Montserrat", "sans-serif";
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 0.4px;
-    color: #333;
-    display: block;
-    line-height: 80px;
-    padding: 0;
-    padding-right: 40px;
-    position: relative;
-    transition: color .15s ease-in-out
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat", "sans-serif";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.4px;
+  color: #f5f5f5;
+  display: block;
+  line-height: 80px;
+  padding: 0;
+  padding-right: 40px;
+  position: relative;
+  transition: color .15s ease-in-out;
+  text-shadow: 0px 0px 6px sandybrown ;
+
 }
 
 .nav-links a:hover {
@@ -124,12 +129,12 @@ nav {
 
 
 .notification {
-  background-color: sandybrown;
+  background-image: radial-gradient(white,sandybrown);
   height: 60px;
   margin: 0;
   display: flex;
   align-items: center;
-  margin-top: 80px;  
+  margin-top: 80px;
 }
 
 .notification p {
@@ -146,9 +151,9 @@ footer {
   color: #fff;
   padding: 20px 0;
   text-align: center;
-  position: relative;
-  
-
+  border-top: 3px;
+  box-shadow: 0px -10px 50px white; 
+  order: 1;
 }
 
 footer p {
@@ -160,33 +165,42 @@ footer p {
 /* menu */
 .container-menu{
   height: 100%;
+  background: inherit;
 }
 .menu
 {
-  background-image: url("https://images6.alphacoders.com/366/366291.jpg");
   opacity: 0.95;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgba(0,0,0,0.6);
   height: 100%;
   position: relative;
 
 }
 .menu-items{
-    margin: 0px 150px 0px 150px;
+    margin: 0px 150px 0px -50px;
+    width: 1200px;
+    height: 600px;
+    border-radius: 50px;
+    background-image: radial-gradient(white,sandybrown);
+    display: flex;
+
 }
+
   .menu-items img{
-    width: 100%;
+    width: calc(100% / 2); 
     padding-bottom: 5px;
+    padding-top: 15px;
     opacity: 0.85;
     object-fit: cover;
     margin-top: 2px;
+    border-radius: 100px;
+
+    
   }
 
-.menu-item {
-    float: left;
-    width: 33%;
-    padding-right: 5px;
+
+
+.menu-item h2 {
+  margin: 0;
 }
 
 .menu-items::after {
@@ -231,19 +245,42 @@ aside {
   left: 0;
   width: 220px; 
   height: 100%;
-  background-image: linear-gradient(to bottom, sandybrown, white);
-
+  border-right: 5px solid sandybrown;
+  background-color: inherit;
+  box-shadow: 2px 0px 5px white;
 
 }
 
 
 .menu {
-  margin-left: 220px;
+  margin-left: 200px;
+  align-items: center;
+  text-align: center;
+}
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+.menu-content h2{
+  margin-right: 170px;
+}
+.menu h2{
+
+  color: white;
+  text-shadow: 0px 0px 5px sandybrown;
+}
+.menu-item{
+  border-radius: 20px;
 }
 
 .filters{
   margin: 30px 0px 150px 0px;
   width: 170px;
+  padding-top: 300px;
 }
 
 input[type=text] {
@@ -257,7 +294,7 @@ input[type=text] {
   display: block;
   margin-bottom: 5px;
   font-size: 20px;
-  color: black;
+  color: white;
   text-shadow: 0 0 3px black, 0 0 5px sandybrown;
 }
 
