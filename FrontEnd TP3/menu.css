@@ -1,16 +1,17 @@
 /* Estilos generales */
 html{
-  height: 100%;
+  min-height: 100%;
 }
 body {
   font-family: "Montserrat", "sans-serif";
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
   background-image: linear-gradient(to bottom left, black, rgb(68, 67, 67));
   order: 0;
 
 }
+
 
 .chefs{
   position: relative;
@@ -153,7 +154,9 @@ footer {
   text-align: center;
   border-top: 3px;
   box-shadow: 0px -10px 50px white; 
-  order: 1;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 footer p {
@@ -164,26 +167,33 @@ footer p {
 
 /* menu */
 .container-menu{
-  height: 100%;
+  min-height: 100%;
   background: inherit;
 }
 .menu
 {
   opacity: 0.95;
   background-repeat: no-repeat;
-  height: 100%;
+  min-height: 100%;
   position: relative;
 
 }
+
+
 .menu-items{
     margin: 0px 150px 0px -50px;
     width: 1200px;
-    height: 600px;
+    min-height: 600px;
+    height: auto;
     border-radius: 50px;
     background-image: radial-gradient(white,sandybrown);
     display: flex;
-
+    flex-wrap: wrap;
+    justify-content: center;
+ 
 }
+
+
 
   .menu-items img{
     width: calc(100% / 2); 
@@ -193,14 +203,19 @@ footer p {
     object-fit: cover;
     margin-top: 2px;
     border-radius: 100px;
-
-    
+    box-sizing: border-box;
   }
 
 
 
 .menu-item h2 {
   margin: 0;
+}
+.menu-item{
+  float: left;
+  width: 40%;
+  padding-right: 5px;
+  margin-top: 20px;
 }
 
 .menu-items::after {
@@ -237,6 +252,7 @@ footer p {
 /*Filters*/
 .container-menu {
   position: relative;
+  height: auto;
 }
 
 aside {
@@ -244,7 +260,7 @@ aside {
   top: 0;
   left: 0;
   width: 220px; 
-  height: 100%;
+  min-height: 100%;
   border-right: 5px solid sandybrown;
   background-color: inherit;
   box-shadow: 2px 0px 5px white;
@@ -256,13 +272,16 @@ aside {
   margin-left: 200px;
   align-items: center;
   text-align: center;
+  
 }
+
 .menu-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-bottom: 100px;
 
 }
 .menu-content h2{

@@ -152,6 +152,7 @@ nav {
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
+    text-shadow: 0px 5px 10px black;
 
 }
 
@@ -162,56 +163,20 @@ nav {
 
 .btn {
     display: inline-block;
-    background-color: #ff5500;
-    color: #fff;
+    background-image: radial-gradient(white,sandybrown);
+    box-shadow: 0px 0px 10px white;
+    color: black;
     padding: 10px 20px;
     border-radius: 4px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    transition: transform 0.9s ease;
 }
 
 .btn:hover {
     background-color: #e64400;
+    transform: scale(1.2);
 }
-/* Estilos del menú
-.menu {
-    background-color: #f8f8f8;
-    padding: 40px 0;
-    text-align: center;
-}
-
-.menu h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.menu-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    justify-items: center;
-    margin-top: 40px;
-}
-
-.menu-item img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.menu-item h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.menu-item p {
-    margin-bottom: 10px;
-}
-
-.menu-item .price {
-    font-weight: bold;
-} */
 
 /* Estilos del pie de página */
 footer {
@@ -303,7 +268,7 @@ footer p {
   }
   
   .manual-btn:hover{
-    background: #40D3DC;
+    background: black;
   } 
   
   #radio1:checked ~ .first{
@@ -313,7 +278,7 @@ footer p {
   #radio2:checked ~ .first{
     margin-left: -20%;
   }
-  
+
   #radio3:checked ~ .first{
     margin-left: -40%;
   }
@@ -321,6 +286,7 @@ footer p {
   #radio4:checked ~ .first{
     margin-left: -60%;
   }
+
   
   /*css for automatic navigation*/
   
@@ -340,25 +306,7 @@ footer p {
     transition: 1s;
   }  */
   
-  .navigation-auto div:not(:last-child){
-    margin-right: 40px;
-  }
-  
-  #radio1:checked ~ .navigation-auto .auto-btn1{
-    background: #40D3DC;
-  }
-  
-  #radio2:checked ~ .navigation-auto .auto-btn2{
-    background: #40D3DC;
-  }
-  
-  #radio3:checked ~ .navigation-auto .auto-btn3{
-    background: #40D3DC;
-  }
-  
-  #radio4:checked ~ .navigation-auto .auto-btn4{
-    background: #40D3DC;
-  }
+
 
   /* box ¿Quienes Somos?*/
   .identidad {
